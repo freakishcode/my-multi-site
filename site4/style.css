@@ -1,0 +1,1030 @@
+/* Universal selector or Global styling */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  /* Using outline:to check content overflow */
+  /* outline: 1px solid red; */
+  /* Giving outline a transparent color to see more clearly */
+  /* background: rgb(0 100 0 / 0.1) !important;*/
+}
+
+/* body {
+    min-height: 300rem;
+} */
+
+/* Customizing Navigation Wrapper */
+.Navigation_Wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+/* Styling 2 navbar class ordered list at Once */
+.navbar1 ul,
+.navbar3 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar1 a:hover,
+.navbar3 a:hover {
+  border-bottom: 2px solid white;
+}
+
+/*Targeting the 1st NavBar */
+.navbar1 ul {
+  justify-content: flex-end;
+  background: rgb(87, 72, 153);
+  font-size: 13px;
+  padding: 10px 10px;
+  gap: 10px;
+  /* z-index help to layer content
+    on top(use 1 or 1000)/ at the back(use -1 ie negative num)
+     of others, useful when using position fixed   */
+  z-index: 1;
+  position: fixed;
+  /* top:0: helps to always stay up in-order
+     not over shadow the rest of the content below  */
+  top: 0;
+  right: 0;
+  width: 100%;
+
+  /* Adding border line to navbar1 */
+  li {
+    border-right: 1px solid #bbb;
+    padding-right: 10px;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+/* Targeting the 2nd NavBar */
+.navbar2 {
+  margin-top: 35px;
+  background: rgb(104, 91, 161);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  img {
+    margin-left: 30px;
+  }
+}
+
+/* customizing search input */
+.search {
+  display: flex;
+  margin: auto 20px;
+
+  /* styling of the search engine  */
+  input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 5vh;
+    width: 200px;
+    outline: none;
+    background: inherit;
+  }
+
+  input::placeholder {
+    text-align: center;
+    color: #fff;
+  }
+
+  input:focus {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  /* styling my search button  icon*/
+  button {
+    height: 6vh;
+    width: 15%;
+    border-radius: 50%;
+    border: none;
+    font-size: 15px;
+    margin-left: 5px;
+    background: inherit;
+    cursor: pointer;
+
+    .fa-search {
+      color: #fff;
+    }
+  }
+}
+
+/* Targeting the 3rd NavBar */
+.navbar3 ul {
+  justify-content: flex-start;
+  gap: 25px;
+  padding: 20px 30px;
+  font-size: 15px;
+  background: rgb(104, 91, 161);
+
+  /* styling all link tag */
+  li a {
+    color: white;
+  }
+}
+
+/* At DESKTOP Screen Toggle icon will be HIDDEN */
+.toggleBtn {
+  width: 2.4rem;
+  height: 2.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+  background-color: #ffd;
+
+  /* hide the btn of desktop */
+  display: none;
+
+  /*  Customizing The LINES in button Toggler */
+  .line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    /* The spacing between lines */
+    margin-top: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* centering the lines */
+  /* margin: auto; */
+}
+
+/* Styling Navigation for only side bar */
+.side-nav {
+  /* At DESKTOP Screen side-nav will be HIDDEN */
+  display: none;
+
+  /* background-color: #4a6b9f; */
+
+  ul {
+    background: rgb(104, 91, 161);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  li a {
+    color: #fff;
+  }
+}
+
+/* caution Sign styling  */
+blockquote {
+  padding: 25px;
+  background: rgb(251, 255, 189);
+  font-family: sans-serif;
+
+  h3,
+  p {
+    cursor: pointer;
+  }
+
+  /* styling the caution icon*/
+  .fa-triangle-exclamation {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    float: left;
+  }
+
+  p > a {
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: green;
+  }
+}
+
+.introductory_image,
+.introductory_image2,
+.introductory_image3,
+.introductory_image4,
+.introductory_image5,
+.introductory_image6 {
+  font-family: Verdana, Geneva, sans-serif;
+  max-width: 100%;
+  background-size: 100% 100%;
+
+  /* for media query testing */
+  background-color: yellow;
+}
+
+/* 1st image of the page  */
+.introductory_image {
+  background-image: url("Medical_Material/home-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: space-between;
+
+  /* styling the text on the image */
+  h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 50px;
+    color: white;
+    padding: 10% 30px;
+    width: 50%;
+    margin: 10px;
+  }
+}
+
+/* a side button link inside the 1st image page */
+aside {
+  width: 35%;
+  min-height: 50vh;
+  margin: auto 20px;
+  display: grid;
+  grid-auto-flow: row;
+
+  /* targeting each button link */
+  button {
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    width: 80%;
+    height: 12vh;
+    color: green;
+    background-color: white;
+    opacity: 0.8;
+    overflow: hidden;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+  }
+
+  span {
+    font-size: 1rem;
+    padding-left: 10px;
+  }
+}
+
+aside button:hover {
+  background-color: rgb(12, 114, 114);
+  color: white;
+}
+
+/* 2nd image of the page  */
+.introductory_image2 {
+  background-image: url("Medical_Material/Research_warmgray_release.png");
+  height: 65vh;
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.words {
+  /* background: red; */
+  min-width: 50%;
+  min-height: 50vh;
+  margin: auto 25px;
+
+  h1 {
+    font-weight: 50px;
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+
+  button {
+    background: rgb(15, 129, 129);
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.words button:hover {
+  background: rgb(12, 114, 114);
+}
+
+/* Social Media button Start */
+.social {
+  /* z-index:help to layer on top */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(237px, 0);
+  /* help to position the z-index */
+  position: fixed;
+  top: 35%;
+  left: 77.3%;
+}
+
+/* Mobile friendly of social Media button */
+@media (max-width: 66rem) {
+  .social {
+    position: fixed;
+    top: 20%;
+    left: 36%;
+  }
+}
+
+.social a {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  margin: 5px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  border-radius: 50px;
+  transition: 1s;
+  transition-property: transform;
+}
+
+.social a:hover {
+  /* makes the icon move to left when  hovered on */
+  transform: translate(-140px, 0);
+}
+
+.social i {
+  margin-left: 10px;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.social a:nth-child(1) i {
+  color: #1da0f0;
+}
+
+.social a:nth-child(2) i {
+  color: red;
+}
+
+.social a:nth-child(3) i {
+  color: orange;
+}
+
+.social a:nth-child(4) i {
+  color: #4ecce8;
+}
+
+/* content boxes Alpha using Grid */
+section {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+
+  .items {
+    font-family: sans-serif;
+    border-right: 1px solid #bbb;
+    text-align: center;
+    padding: 30px 10px;
+
+    h3 {
+      padding-bottom: 20px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: green;
+      padding: 10px;
+      transition: ease-in-out 0.3s;
+      border-radius: 10px;
+    }
+  }
+}
+
+/* customizing page at mobile preference of grid sections */
+@media (max-width: 550px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.items > a:hover {
+  background-color: #2b1a3d;
+  color: #fff;
+}
+
+/* 3rd image of the page  */
+.introductory_image3 {
+  margin-top: 30px;
+  background-image: url("Medical_Material/better-story-block-robin.jpg");
+  height: 66vh;
+  /* background-position: center; */
+  color: #fff;
+
+  /* styling the content in 3rd image */
+  h1 {
+    font-weight: 50px;
+    font-size: 35px;
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+
+  p {
+    padding-left: 30px;
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.introductory_image3 button:hover {
+  background: rgb(12, 114, 114);
+}
+
+/* content boxes Beta */
+.content2 h1 {
+  padding-bottom: 25px;
+  font-weight: 50px;
+  font-size: 35px;
+  color: rgb(104, 91, 161);
+}
+
+.content2 span {
+  padding: 0 50px;
+  color: gray;
+}
+
+/* 4th image of the page  */
+.introductory_image4 {
+  margin-top: 30px;
+  background-image: url("Medical_Material/community-program-story.jpg");
+  height: 65vh;
+  color: #fff;
+
+  /* styling the content in 4th image */
+  h1 {
+    font-weight: 50px;
+    font-size: 35px;
+    padding-top: 9%;
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+
+  p {
+    padding-left: 30px;
+  }
+
+  /* customizing the button in the 4th image of page */
+  button {
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 1rem;
+    margin-left: 30px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    transition: ease-in-out 0.3s;
+    background: rgb(15, 129, 129);
+
+    a {
+      color: #fff;
+    }
+  }
+
+  button:hover {
+    background: rgb(12, 114, 114);
+  }
+}
+
+/* 5th image of the page  */
+.introductory_image5 {
+  background-image: url("Medical_Material/home-story-building-2.jpg");
+  height: 65vh;
+  color: #fff;
+
+  h1 {
+    font-weight: 50px;
+    font-size: 35px;
+    padding-top: 4%;
+    padding-left: 30px;
+    padding-bottom: 2%;
+  }
+
+  p {
+    padding-left: 30px;
+  }
+
+  /* customizing the button in the 5th image of page */
+  button {
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 30px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: rgb(15, 129, 129);
+    transition: ease-in-out 0.3s;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  button:hover {
+    background: rgb(12, 114, 114);
+  }
+}
+
+/* content boxes Beta */
+.content3 h1 {
+  padding-bottom: 25px;
+  font-weight: 50px;
+  font-size: 35px;
+  color: rgb(104, 91, 161);
+}
+
+.content3 span {
+  padding: 0 50px;
+  color: gray;
+}
+
+/* 6th image of the page  */
+.introductory_image6 {
+  margin-top: 25px;
+  background-image: url("Medical_Material/home-story-4.jpg");
+  height: 65vh;
+  color: #fff;
+
+  h1 {
+    font-weight: 50px;
+    font-size: 35px;
+    padding-top: 6%;
+    padding-left: 30px;
+    padding-bottom: 25px;
+  }
+
+  p {
+    padding-left: 30px;
+  }
+
+  /* customizing the button in the 6th image of page */
+  button {
+    margin-top: 1rem;
+    margin-left: 30px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    transition: ease-in-out 0.3s;
+    background: rgb(15, 129, 129);
+
+    a {
+      color: #fff;
+    }
+  }
+
+  button:hover {
+    background: rgb(12, 114, 114);
+  }
+}
+
+/* Email registry styling  */
+.form_SignUP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-family: sans-serif;
+  padding: 20px 0;
+
+  label {
+    margin-right: 15px;
+  }
+
+  /* targeting the email space input */
+  input {
+    flex-basis: 25%;
+    height: 7vh;
+  }
+
+  input::placeholder {
+    text-align: center;
+  }
+
+  button {
+    border-radius: 3px;
+    margin: 0 20px;
+    font-weight: bold;
+    padding: 15px 20px;
+    color: #fff;
+    background: rgb(15, 129, 129);
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: rgb(10, 107, 107);
+  }
+
+  button:active {
+    background: green;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.footer1,
+.footer2 {
+  color: rgb(15, 129, 129);
+}
+
+/* .footer1 {
+  background-color: #2b1a3d;
+}
+.footer2 {
+  background-color: red;
+}
+.footer3 {
+  background-color: yellow;
+} */
+
+/* General footer1 styling */
+.footer1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  h4 {
+    color: #101010;
+    padding-bottom: 0.15rem;
+    text-decoration: underline;
+    font-family: arial;
+    font-weight: bold;
+  }
+
+  p {
+    padding: 5px 10px;
+  }
+}
+
+.footer1 p:hover {
+  border: 1px solid rgb(15, 129, 129);
+  cursor: pointer;
+}
+
+.foot1bn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: rgb(15, 129, 129);
+  cursor: pointer;
+  color: #fff;
+  margin-left: 9px;
+}
+
+.foot1bn:hover {
+  cursor: pointer;
+  background: rgb(10, 107, 107);
+}
+
+.foot1bn:active {
+  background: green;
+}
+
+/* General footer1 styling */
+.footer2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* image logo in footer2 */
+.footer2_logo img {
+  width: 150px;
+  padding: 10px;
+}
+
+/* General footer1 styling */
+.footer3 {
+  color: #101010;
+}
+
+.CopyRight {
+  width: 40%;
+}
+
+.footer_social_media {
+  padding-top: 30px;
+  padding-right: 30px;
+  float: right;
+}
+
+.footer_social_media a i {
+  font-size: 30px;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+.footer_social_media i:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/* Styling each icon by Using Attribute Selector */
+.footer_social_media i[class|="fab fa-facebook"] {
+  color: darkblue;
+}
+.footer_social_media i[class|="fab fa-twitter"] {
+  color: skyblue;
+}
+.footer_social_media i[class="fab fa-instagram"] {
+  color: orange;
+}
+.footer_social_media i[class="fab fa-tiktok"] {
+  color: black;
+}
+.footer_social_media i[class="fab fa-pinterest"] {
+  color: red;
+}
+.footer_social_media i[class="fab fa-industry"] {
+  color: grey;
+}
+.footer_social_media i[class="fab fa-youtube"] {
+  color: red;
+}
+
+/* At MOBILE FRIENDLY Screen Toggle will be VISIBLE */
+@media (max-width: 65rem) {
+  .toggleBtn {
+    display: block;
+    z-index: 999;
+
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    transition: 0.3s;
+  }
+
+  /* animating the line bar to change to X-iCON in toggle-icon */
+  .toggleBtn.show .line:nth-child(1) {
+    transform: translateY(8px) rotate(48deg);
+  }
+  .toggleBtn.show .line:nth-child(2) {
+    opacity: 0;
+  }
+  .toggleBtn.show .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-46deg);
+  }
+
+  /* Enabling the navbar */
+  .show {
+    right: 0;
+  }
+
+  /* Necessary for Java Script implementation */
+  /* Disable the list items */
+  .navbar1,
+  .navbar3 {
+    display: none;
+  }
+  .navbar1 ul,
+  .navbar3 ul {
+    position: none;
+  }
+
+  /*Separating the nav2 in toggle menu*/
+  .navbar2 {
+    margin-top: 0;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    /* Reducing the size of the image */
+    img {
+      width: 50%;
+      margin-left: 30px;
+    }
+
+    /* Hiding the search input only not the icon */
+    .search > input {
+      display: none;
+    }
+
+    /* styling my search button  icon*/
+    button {
+      height: 5vh;
+      width: 35%;
+      border-radius: 50%;
+      font-size: large;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Styling Navigation for only side bar */
+  .side-nav {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+
+    z-index: 2;
+
+    /* Note this does work on fire-fox browser*/
+    /* ul {
+      backdrop-filter: blur(2rem);
+    } */
+
+    ul li {
+      padding: 5px;
+      transition: ease-in-out 0.5s;
+    }
+  }
+
+  .side-nav li:hover {
+    border-radius: 4px;
+    background-color: red;
+  }
+
+  /* Enable the list item */
+  .active {
+    display: block;
+  }
+
+  .form_SignUP {
+    flex-direction: column;
+    overflow: hidden;
+
+    input {
+      margin-top: 10px;
+      padding: 5px 30px;
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 15px 9.5em;
+    }
+  }
+
+  .introductory_image,
+  .introductory_image2,
+  .introductory_image3,
+  .introductory_image4,
+  .introductory_image5,
+  .introductory_image6 {
+    background-repeat: no-repeat;
+  }
+
+  /* 1st image of the page  */
+  .introductory_image {
+    background-size: cover;
+    background-position: center;
+
+    /* styling the text on the image */
+    h1 {
+      font-size: 30px;
+      padding: 10% 30px;
+      width: 10%;
+      margin: 1rem;
+    }
+
+    /* a side button link inside the 1st image page */
+    aside {
+      width: 45%;
+      min-height: 40vh;
+      margin: auto 0;
+      display: grid;
+      grid-auto-flow: row;
+
+      /* targeting each button link */
+      button {
+        width: 90%;
+        height: 10vh;
+        color: green;
+        overflow: hidden;
+        transition: none;
+      }
+    }
+
+    span {
+      padding-left: 1px;
+    }
+  }
+
+  /* 2nd image of the page  */
+  .introductory_image2 {
+    background-size: 100% 100%;
+    height: 40vh;
+    padding: 0.55rem 0;
+    background-position: center;
+
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      padding-bottom: 20px;
+    }
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+
+  .introductory_image3 {
+    margin-top: 1px;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 30vh;
+    color: #101010;
+
+    /* styling the content in 3rd image */
+    h1 {
+      font-weight: bold;
+      font-size: 35px;
+      padding-top: 20px;
+      padding-left: 30px;
+      padding-bottom: 15px;
+    }
+  }
+
+  /* 4th image of the page  */
+  .introductory_image4 {
+    margin-top: 30px;
+    height: 43vh;
+    background-size: 100% 100%;
+    background-position: center;
+    color: #fff;
+
+    /* styling the content in 4th image */
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      padding-top: 5%;
+    }
+
+    /* customizing the button in the 4th image of page */
+    button {
+      transition: none;
+    }
+  }
+
+  /* 5th image of the page  */
+  .introductory_image5 {
+    height: 45vh;
+    background-size: 100% 100%;
+
+    color: #fff;
+
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      padding-top: 4%;
+      padding-left: 30px;
+      padding-bottom: 2%;
+    }
+  }
+
+  /* 6th image of the page  */
+  .introductory_image6 {
+    margin-top: 0;
+    height: 44vh;
+    background-size: 100% 100%;
+    color: #fff;
+
+    h1 {
+      font-weight: bold;
+      font-size: 30px;
+      padding-top: 6%;
+      padding-left: 30px;
+      padding-bottom: 25px;
+    }
+  }
+}

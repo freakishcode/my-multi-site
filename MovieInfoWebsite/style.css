@@ -114,11 +114,10 @@ h2 {
 }
 
 .genre div {
-  text-align: center;
-  margin: 0.31rem 0;
   border: 1px solid #a0a0a0;
-  font-size: 0.75em;
+  text-align: center;
   padding: 0.4em -1.9em;
+  font-size: 0.75em;
   border-radius: 0.4em;
   font-weight: 300;
 }

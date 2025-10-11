@@ -150,6 +150,10 @@ p {
     grid-template-columns: 1fr 1fr;
   } */
 
+  .rating {
+    margin: 0.2em 0 0.3em 0;
+  }
+
   .genre div {
     display: flex;
     padding: 0.2em 0.4em;
@@ -162,5 +166,9 @@ p {
   }
   .info {
     grid-template-columns: 1fr;
+  }
+
+  h3 {
+    margin-top: 1em;
   }
 }

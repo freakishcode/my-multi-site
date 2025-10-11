@@ -18,7 +18,7 @@ body {
 .container {
   font-size: 16px;
   width: 90vw;
-  max-width: 37em;
+  max-width: 38em;
   padding: 1.9em 2em;
   background-color: #1e293b;
   position: absolute;
@@ -30,17 +30,27 @@ body {
 }
 
 .search-container {
-  display: grid;
-  grid-template-columns: 9fr 3fr;
-  gap: 1.2em;
+  display: flex;
+  justify-content: center;
+
+  gap: 0.6em;
+  margin-bottom: 1.5em;
 }
 
 .search-container input,
 .search-container button {
-  padding: 0.3em 0;
+  padding: 0.3em 1em;
   font-size: 0.9em;
   outline: none;
   border-radius: 0.3em;
+}
+
+.search-container input {
+  width: 70%;
+  border: 1px solid #a0a0a0;
+  background-color: #1e293b;
+  color: #fff;
+  text-align: center;
 }
 
 .search-container input:focus {
@@ -60,24 +70,34 @@ body {
 
 #result {
   color: #fbfbfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.Movie-Poster-and-Title {
+  .poster {
+    display: block;
+    margin: auto;
+    width: 100%;
+    width: auto;
+    height: 20em;
+  }
+
+  #Title {
+    text-align: center;
+    margin-top: 0.6em;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
 }
 
 .info {
-  position: relative;
   display: grid;
   grid-template-columns: 4fr 8fr;
   margin-top: 1.2em;
-}
-
-.poster {
-  width: 100%;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1.5em;
-  font-weight: 600;
-  letter-spacing: 0.06em;
 }
 
 .rating {
@@ -85,7 +105,6 @@ h2 {
   align-items: center;
   justify-content: center;
   gap: 0.6em;
-  margin: 0.6em 0 0.9em 0;
 }
 
 .rating img {
@@ -122,6 +141,7 @@ h2 {
 }
 
 h3 {
+  color: rgb(230, 174, 71);
   font-weight: 500;
   margin-top: 1.2em;
 }
@@ -150,10 +170,14 @@ p {
     grid-template-columns: 1fr 1fr;
   } */
 
-  .rating {
-    margin: 0.2em 0 0.3em 0;
+  #result {
+    flex-direction: column;
+    gap: 1rem;
   }
 
+  .details {
+    gap: 0.3em;
+  }
   .genre div {
     display: flex;
     padding: 0.2em 0.4em;
